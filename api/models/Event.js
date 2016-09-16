@@ -6,8 +6,8 @@
  */
 
 module.exports = {
-  autoPK:false,
-  schema:true,
+  autoPK: false,
+  schema: true,
 
   attributes: {
     id: {
@@ -20,19 +20,30 @@ module.exports = {
       required: true
     },
 
-     url: {
-       type: 'string', // where to get details about the event
-       required: true
-     },
+    url: {
+      type: 'string', // where to get details about the event
+      required: true
+    },
 
-     description: {
-       type: 'string', // summary of what's happening
-       size: 2048,
-       required: false
-     },
+    description: {
+      type: 'string', // summary of what's happening
+      size: 2048,
+      required: false
+    },
 
     beginDate: {
       type: 'datetime',  // UTC format
+      required: true
+    },
+
+    beginDay: {
+      type: 'string',  // calendar format, ex Sept 16 
+      required: true
+    },
+
+    beginDayInWeek: {
+      type: 'string', // local time
+      enum: ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'],
       required: true
     },
 
@@ -41,45 +52,41 @@ module.exports = {
       required: true
     },
 
-    beginDay: {
-      type: 'string', // local time
-      enum: ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'],
-      required: true
-    },    
-
     endDate: {
       type: 'datetime', // local time format
-       required: true
+      required: true
     },
 
-  endTime: {
-      type: 'string',  // local time 
-     required: true
-   },
-
     endDay: {
+      type: 'string',  // calendar format, ex Sept 16 
+      required: true
+    },
+
+    endDayInWeek: {
       type: 'string', // local time
       enum: ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'],
       required: true
-   }, 
+    },
 
-    category: { 
+    endTime: {
+      type: 'string',  // local time 
+      required: true
+    },
+
+    category: {
       type: 'string',
       enum: ['conference', 'hackathon', 'workshop', 'training'],
       defaultsTo: 'session',
       required: true
     },
 
-  
     country: {
-      type: 'string', 
-      //enum: ['ClassRoom1', 'ClassRoom2', 'DemoPods', 'LearningLab', 'Theater', 'WorkBench1', 'WorkBench2', 'WorkBench3', 'WorkBench4', 'DevNetZone'],
+      type: 'string',
       required: true
     },
 
     city: {
-      type: 'string', 
-      //enum: ['ClassRoom1', 'ClassRoom2', 'DemoPods', 'LearningLab', 'Theater', 'WorkBench1', 'WorkBench2', 'WorkBench3', 'WorkBench4', 'DevNetZone'],
+      type: 'string',
       required: true
     },
 
