@@ -25,6 +25,25 @@ An instance of the API is deployed on Heroku servers, and persists its data into
 - https://devnet-events-api.herokuapp.com/api/v1/events/next
 
 
+# Companions
+
+## Cisco Spark bot
+
+Launch Cisco Spark and invite CiscoDevNet@sparkbot.io to meet the bot.
+
+The bot consumes the Events API to display current and upcoming events in Spark Rooms:
+- bot source code: https://github.com/CiscoDevNet/node-sparkbot-samples/tree/master/examples/devnet 
+- bot deployed at: https://devnet-events-sparkbot.herokuapp.com/
+
+
+## Slack bot
+
+Follow the [guidelines to run the bot](https://github.com/ObjectIsAdvantag/devnet-botkit-sample#how-to-run) on your local machine.
+
+The bot consumes the Events API to display current and upcoming events in Slack channels
+- bot source code: https://github.com/ObjectIsAdvantag/devnet-botkit-sample/blob/master/bot.js
+
+
 # License
 
 [MIT](LICENSE)
