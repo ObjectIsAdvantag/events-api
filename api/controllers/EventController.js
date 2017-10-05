@@ -7,8 +7,12 @@
 
 module.exports = {
 	findNext: function (req, res) {
-        var now = new Date(Date.now());
-
+        // check if there is a date specified
+        var now = req.param('now');
+        if (!now) {
+            now = new Date(Date.now());
+        }
+        
         // set limit
         var limit = req.param('limit');
         if (!limit) {
