@@ -1,10 +1,10 @@
 {
   "name": "events-api",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "REST API that exposes events",
   "keywords": ["webapi", "events", "ciscospark", "spark4devs", "cisco", "devnet"],
   "dependencies": {
-    "ejs": "2.3.4",
+    "ejs": "2.6.2",
     "grunt": "0.4.5",
     "grunt-contrib-clean": "0.6.0",
     "grunt-contrib-coffee": "0.13.0",
